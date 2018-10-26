@@ -194,7 +194,7 @@ const sync = async function(type, hash) {
 
         // zmq broadcast
         let b = { i: index, txs: content }
-        console.log('Zmq block = ', JSON.stringify(b, null, 2))
+        //console.log('Zmq block = ', JSON.stringify(b, null, 2))
         outsock.send(['block', JSON.stringify(b)])
       }
 
@@ -225,7 +225,7 @@ const sync = async function(type, hash) {
       try {
         await Db.mempool.insert(content)
         console.log('# Q inserted [size: ' + queue.size + ']',  hash)
-        console.log(content)
+        //console.log(content)
         outsock.send(['mempool', JSON.stringify(content)])
       } catch (e) {
         // duplicates are ok because they will be ignored

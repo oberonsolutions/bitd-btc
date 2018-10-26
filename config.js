@@ -9,7 +9,7 @@ module.exports = {
     'limit': 15
   },
   'db': {
-    'name': 'bitdb',
+    'name': 'bitdb-btc',
     'url': 'mongodb://localhost:27017',
     'index': {
       'confirmed': {
